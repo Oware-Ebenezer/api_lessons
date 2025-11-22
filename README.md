@@ -1,16 +1,30 @@
-# React + Vite
+# API LESSONS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React + Vite Configuration
+- npm create vite@latest react --template-react
+- TailwindCSS for styling - npm install tailwindcss @tailwindcss/vite
+- Include the tailwindcss in vite.config.js
+- Code example below
+  import { defineConfig } from 'vite'
+  import react from '@vitejs/plugin-react'
+  import tailwindcss from '@tailwindcss/vite'
+  
+  // https://vite.dev/config/
+  export default defineConfig({
+    plugins: [react(),tailwindcss()],
+  })
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  ## API Approach
+  - Used built in "Fetch" to practice on small project
+  - Used method such as POST, GET, PUT, DELETE mimicking a backend server
+  - User can add, delete, reload page
+  - Implemented API consuming using "https://jsonplaceholder.typicode.com/users" for real time practice
+  - Use try-catch block to handle errors
+  - Since practice I intend to use async approach for promising sake.
+  - For best practice and industry, I made use of third party API "AXIOS"
+  - Used the following to install axios
+    npm install axios [Node Package Manager]
+    yarn add axios
+    bower install axios
+    pnpm add axios
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> [Don't use for production-ready app]
